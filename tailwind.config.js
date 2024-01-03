@@ -13,6 +13,10 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    cursor: {
+      custom: 'url("https://img.icons8.com/external-others-inmotus-design/67/external-Dot-atm-others-inmotus-design.png"), pointer',
+    },
   },
   plugins: [],
 }
+
