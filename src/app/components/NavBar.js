@@ -1,9 +1,17 @@
 'use client'
 
+import gsap from 'gsap';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function NavBar() {
+
+  useEffect(() => {
+    const navtl = gsap.timeline();
+    navtl.to(".nav-1", { opacity: 1, duration: 0.5 }, 0.5);
+    navtl.to(".nav-2", { opacity: 1, duration: 0.5 });
+    navtl.to(".nav-3", { opacity: 1, duration: 0.5 });
+  }, [])
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -38,24 +46,20 @@ export default function NavBar() {
   };
 
   return (
+
+    
     <nav className={`fixed top-0 w-full z-10 transition-opacity duration-500 fade-in ${visible ? 'opacity-100' : 'opacity-0 -translate-y-full'}`}>
       <div className="flex items-center justify-between px-10 md:px-8 py-3 md:py-6">
 
         <div className="hidden md:flex flex-grow items-center justify-end space-x-16">
-          <Link id="hover-underline" href="/" onClick={closeMenu} className="block md:inline-block mt-4 md:mt-0">
+          <Link id="hover-underline" href="/" onClick={closeMenu} className="nav-1 opacity-0 block md:inline-block mt-4 md:mt-0">
             RÓLUNK
           </Link>
-          <Link id="hover-underline" href="./elado" onClick={closeMenu} className="block md:inline-block mt-4 md:mt-0">
+          <Link id="hover-underline" href="./elado" onClick={closeMenu} className="nav-2 opacity-0 block md:inline-block mt-4 md:mt-0">
             SZOLGALTATASOK
           </Link>
-          <Link id="hover-underline" href="./vevo" onClick={closeMenu} className="block md:inline-block mt-4 md:mt-0">
+          <Link id="hover-underline" href="./vevo" onClick={closeMenu} className="nav-3 opacity-0 block md:inline-block mt-4 md:mt-0">
             KONTAKT
-          </Link>
-          {/* <Link id="hover-underline" href="/blogPage" onClick={closeMenu} className="block md:inline-block mt-4 md:mt-0">
-            BLOG
-          </Link> */}
-          <Link id="hover-underline" href="/#contact" onClick={closeMenu} className="block md:inline-block mt-4 md:mt-0">
-            KAPCSOLAT
           </Link>
         </div>
 
@@ -88,14 +92,6 @@ export default function NavBar() {
             </Link>
             <Link href="/vevo" onClick={closeMenu} className="block pb-2 py-5 px-2 border-b">
               KONTAKT
-            </Link>
-
-            
-            {/* <Link href="/blogPage" onClick={closeMenu} className="block py-2 px-2 border-b">
-              BLOG
-            </Link> */}
-            <Link href="/#contact" onClick={closeMenu} className="block pb-2 py-5 px-2 border-b">
-              KAPCSOLAT
             </Link>
           </div>
         </div>

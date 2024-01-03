@@ -23,7 +23,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-p {
+.letters {
   font-family: 'Kalnia', serif;
 }
 
@@ -53,7 +53,7 @@ p {
   position: fixed;
   width: 15px;
   height: 100vh;
-  background: rgb(216, 79, 79);
+  background: black;
   left: 23%;
 }
 
@@ -63,4 +63,9 @@ p {
   height: 100vh;
   background: black;
   left: 25%;
+}
+
+
+.circle {
+  transform-origin: center;
 }
