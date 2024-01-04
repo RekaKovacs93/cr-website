@@ -53,7 +53,7 @@ export default function Hero() {
                 </div>
                 <svg width="300" height="300">
                     <path id="circlePath" d="M150 50 A 100 100 0 0 1 250 150 A 100 100 0 0 1 150 250 A 100 100 0 0 1 50 150 A 100 100 0 0 1 150 50" fill="none" stroke="transparent" />
-                    <text className='letters circle opacity-0'>
+                    <text className='logo circle opacity-0'>
                         <textPath href="#circlePath" className='text-3xl'>
                         REKA AND CSENGI MAKE COOL STUFF**
                         </textPath>
