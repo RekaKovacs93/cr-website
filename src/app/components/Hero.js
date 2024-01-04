@@ -14,7 +14,7 @@ export default function Hero() {
         logotl.to(".letters-4", { opacity: 1, duration: 0.5 });
         logotl.to(".letters-5", { opacity: 1, duration: 0.5 });
         logotl.to(".letters-6", { opacity: 1, duration: 0.5 });
-        logotl.to(".spark", {opacity : 1, transformOrigin: 'center', duration:1, ease: "none",})
+        logotl.to(".spark", {opacity : 1, transformOrigin: 'center', duration: 0.3, scale: 1, ease: "rough", yoyo: true, stagger: {amount: 0.002}, repeat: 2})
         const tl = gsap.timeline();
         tl.to("#line-one", { opacity: 1, duration: 0.5 }, 2);
         tl.to("#line-two", { opacity: 1, duration: 1 });
@@ -44,7 +44,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <Image
-                        className='spark opacity-0'
+                        className='spark opacity-0 scale-0'
                         alt="spark"
                         src="https://cdn3.iconfinder.com/data/icons/star-accents/32/star-set-expand-app-46-1024.png"
                         width="100"
